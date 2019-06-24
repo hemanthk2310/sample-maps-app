@@ -1,0 +1,14 @@
+<agm-map [latitude]='initialLat' [longitude]='initialLon' (mapClick)="onMapClicked($event)">
+    <agm-marker *ngFor="let latlon of latLonDetails; let i = index" (markerClick)="onMarkerClicked(latlon, i)" [latitude]="latlon.lat" [longitude]="latlon.lon" [iconUrl]="
+    {
+      url: latlon.isClicked ? './assets/images/blue-marker.png' : './assets/images/red-marker.png',
+      scaledSize: {
+          width: 40,
+          height: 60
+      }
+  }"></agm-marker>
+</agm-map>
+
+<div *ngFor="let markerDetial of markerDetails">
+    <app-marker-details [markerDetail]="markerDetial"></app-marker-details>
+</div>

@@ -1,0 +1,13 @@
+.list-unstyled {
+    padding: 10px 20px;
+    list-style: none;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.image-size {
+    height: 200px;
+    width: 250px;
+}
